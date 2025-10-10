@@ -1,0 +1,170 @@
+Приведите пример структуры HTML5 документа.
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Описание страницы">
+    <title>Заголовок страницы</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Логотип сайта</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>Заголовок статьи</h2>
+            <p>Содержимое статьи...</p>
+        </article>
+        
+        <aside>
+            <h3>Боковая панель</h3>
+            <p>Дополнительная информация</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Компания. Все права защищены.</p>
+    </footer>
+</body>
+</html>
+2. Какие новые семантические элементы появились в HTML5?
+<header> - шапка сайта или раздела
+
+<footer> - подвал сайта или раздела
+
+<nav> - навигационное меню
+
+<main> - основное содержимое страницы
+
+<article> - независимая статья/запись
+
+<section> - тематическая группа содержимого
+
+<aside> - боковая панель, дополнительный контент
+
+<figure> и <figcaption> - медиа-контент с подписью
+
+<time> - для обозначения времени и даты
+
+<mark> - выделенный текст
+
+<progress> - индикатор прогресса
+
+<meter> - скалярное значение в известном диапазоне
+3. Перечислите и опишите семантические элементы HTML5 для текстового 
+содержимого.
+<mark>	Выделение текста (как маркером)
+<time>	Дата/время с атрибутом datetime
+<cite>	Название творческой работы
+<blockquote>	Длинная цитата с cite для источника
+<q>	Короткая встроенная цитата
+<code>	Фрагмент кода
+<pre>	Предварительно форматированный текст
+<var>	Переменная в математике/программировании
+<kbd>	Ввод с клавиатуры
+<samp>	Пример вывода программы
+4. Перечислите и опишите элементы для поддержки аудио, видео и 
+подключаемых модулей.
+<audio controls>
+    <source src="audio.mp3" type="audio/mpeg">
+    <source src="audio.ogg" type="audio/ogg">
+    Ваш браузер не поддерживает аудио.
+</audio>
+<embed src="flash.swf" type="application/x-shockwave-flash">
+<object data="pdf.pdf" type="application/pdf" width="100%" height="500">
+    <param name="autoplay" value="false">
+</object>
+<video controls width="640" height="360">
+    <source src="video.mp4" type="video/mp4">
+    <source src="video.webm" type="video/webm">
+    Ваш браузер не поддерживает видео.
+</video>
+5. Перечислите и опишите типы позиционирования, которые вы знаете.
+static	Стандартное позиционирование (по умолчанию)
+relative	Относительное позиционирование от нормального положения
+absolute	Абсолютное позиционирование относительно ближайшего позиционированного предка
+fixed	Фиксированное позиционирование относительно окна браузера
+sticky	"Липкое" позиционирование (переключается между relative и fixed)
+6. Позиционирование внутри элемента.
+.container {
+    position: relative; 
+    width: 400px;
+    height: 300px;
+}
+
+.child {
+    position: absolute;
+    top: 50%;         
+    left: 50%;        
+    transform: translate(-50%, -50%); 
+}
+<div class="container">
+    <div class="child">Центрированный элемент</div>
+</div>
+7. Перечислите и опишите составные компоненты формы.
+<form action="/submit" method="post">
+
+    <label for="name">Имя:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="country">Страна:</label>
+    <select id="country" name="country">
+        <option value="ru">Россия</option>
+        <option value="us">США</option>
+    </select>
+    
+
+    <label>
+        <input type="checkbox" name="subscribe"> Подписаться на рассылку
+    </label>
+    
+
+    <fieldset>
+        <legend>Пол:</legend>
+        <label>
+            <input type="radio" name="gender" value="male"> Мужской
+        </label>
+        <label>
+            <input type="radio" name="gender" value="female"> Женский
+        </label>
+    </fieldset>
+
+    <label for="message">Сообщение:</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+    
+
+    <button type="submit">Отправить</button>
+    <button type="reset">Сбросить</button>
+</form>
+8. Перечислите и опишите глобальные атрибуты тега в HTML5.
+id	Уникальный идентификатор элемента
+class	Список классов для стилизации
+style	Инлайновые CSS-стили
+title	Всплывающая подсказка
+lang	Язык содержимого элемента
+dir	Направление текста (ltr, rtl)
+data-*	Пользовательские данные
+hidden	Скрывает элемент
+tabindex	Порядок перехода по Tab
+accesskey	Горячая клавиша для активации
+contenteditable	Разрешает редактирование
+draggable	Разрешает перетаскивание
+spellcheck	Проверка орфографии
+translate	Разрешает/запрещает перевод
+<div id="main" class="container primary" 
+     data-user-id="123" 
+     title="Информация"
+     contenteditable="true"
+     tabindex="1">
+    Редактируемый контент
+</div>
